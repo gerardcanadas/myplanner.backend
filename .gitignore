@@ -27,7 +27,16 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+<<<<<<< HEAD
 wwwroot/
 
 # Visual Studio 2015
 .vs/
+=======
+
+# Visual Studio 2015
+.vs/
+
+# .Net core WebApi deploy
+wwwroot/
+>>>>>>> ccc5bae2a019aa6412a5c84f2af5254a5637fd4b

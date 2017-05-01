@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 
+<<<<<<< HEAD
 namespace devices
+=======
+namespace backend
+>>>>>>> ccc5bae2a019aa6412a5c84f2af5254a5637fd4b
 {
     public class Program
     {

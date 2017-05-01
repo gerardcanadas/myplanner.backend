@@ -8,7 +8,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
+<<<<<<< HEAD
 namespace devices
+=======
+namespace backend
+>>>>>>> ccc5bae2a019aa6412a5c84f2af5254a5637fd4b
 {
     public class Startup
     {
@@ -18,7 +22,10 @@ namespace devices
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+<<<<<<< HEAD
                 .AddJsonFile("config.json")
+=======
+>>>>>>> ccc5bae2a019aa6412a5c84f2af5254a5637fd4b
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
