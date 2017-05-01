@@ -3,7 +3,7 @@ FROM microsoft/aspnetcore
  
 # Copy our code from the "/src/MyWebApi/bin/Debug/netcoreapp1.1/publish" folder to the "/app" folder in our container
 WORKDIR /app
-COPY ./src/MyWebApi/bin/Debug/netcoreapp1.1/publish .
+COPY ./bin/Debug/netcoreapp1.1/publish .
  
 # Expose port 80 for the Web API traffic
 ENV ASPNETCORE_URLS http://+:80
