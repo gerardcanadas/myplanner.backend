@@ -24,9 +24,9 @@ FOREIGN KEY (deviceId) REFERENCES Devices(id)
 );
  
  
-SELECT 'user.id', 'user.username','device.id', 'device.deviceId', 'device.active' FROM UsersDevices udev 
-LEFT JOIN Users user ON udev.userId = user.id
-LEFT JOIN Devices device ON udev.deviceId = device.Id
+SELECT user.id, user.username,device.id, device.deviceId, device.active FROM UsersDevices udev 
+INNER JOIN Users user ON udev.userId = user.id
+INNER JOIN Devices device ON udev.deviceId = device.Id
 WHERE user.username = @username
 
 
