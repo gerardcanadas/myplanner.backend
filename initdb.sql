@@ -22,6 +22,21 @@ PRIMARY KEY (userId,deviceId),
 FOREIGN KEY (userId) REFERENCES Users(id),
 FOREIGN KEY (deviceId) REFERENCES Devices(id)
 );
+
+CREATE TABLE IF NOT EXISTS Notifications (
+id INT NOT NULL AUTO_INCREMENT,
+name TEXT NOT NULL,
+message TEXT NULL,
+active TINYINT NOT NULL,
+);
+
+CREATE TABLE IF NOT EXISTS UsersNotifications (
+userId INT NOT NULL,
+notificationId INT NOT NULL,
+PRIMARY KEY (userId,notificationId),
+FOREIGN KEY (userId) REFERENCES Users(id),
+FOREIGN KEY (notificationId) REFERENCES Notifications(id)
+);
  
  
 SELECT user.id, user.username,device.id, device.deviceId, device.active FROM UsersDevices udev 
