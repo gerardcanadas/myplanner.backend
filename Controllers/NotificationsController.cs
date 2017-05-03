@@ -31,8 +31,9 @@ namespace devices.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(string id)
         {
-            UserDevice res = await udevRepo.FindUserDevicesAsync(id);
-            return Ok(res);
+         //   var scheduledJob2 = singularity.ScheduleParameterizedJob(
+        //     schedule2, job, "Hello World 2", startTime);
+            return Ok();
         }
 
         // POST api/values

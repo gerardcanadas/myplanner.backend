@@ -40,7 +40,7 @@ namespace devices.Controllers
         public async Task<IActionResult> Post([FromBody]UserDevice value)
         {
             await udevRepo.InsertUserDeviceAsync(value);
-            return Ok();
+            return Ok(true);
         }
 
         // PUT api/values/5

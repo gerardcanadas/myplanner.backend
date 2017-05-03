@@ -12,6 +12,7 @@ namespace devices.Db
         {
             try {
                 string connectionString = AppConfig.Config["Data:ConnectionString"];
+                Console.WriteLine("ConnectionString: {0}", connectionString);
                 Connection = new MySqlConnection(connectionString);
                 Connection.Open();
             }
