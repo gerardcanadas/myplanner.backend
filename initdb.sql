@@ -28,6 +28,7 @@ id INT NOT NULL AUTO_INCREMENT,
 name TEXT NOT NULL,
 message TEXT NULL,
 notificationTypeId INT NOT NULL,
+cron TEXT NOT NULL,
 active TINYINT NOT NULL,
 PRIMARY KEY (id),
 FOREIGN KEY (notificationTypeId) REFERENCES NotificationType(id)
@@ -37,6 +38,7 @@ CREATE TABLE IF NOT EXISTS NotificationType (
 id INT NOT NULL AUTO_INCREMENT,
 name TEXT NOT NULL,
 description TEXT NULL,
+PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS UsersNotifications (
